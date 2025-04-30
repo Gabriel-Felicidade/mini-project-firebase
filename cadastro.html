@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/services/cadastro.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body class="bg-dark">
+    <!-- Original commented-out form remains as is -->
+    <!-- <div>
+        <h1>CADASTRO</h1>
+        <form action="" id="cadastroForm">
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" required>
+            </div>
+            <div>
+                <label for="senha">Repetir senha:</label>
+                <input type="password" id="confirmarSenha" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p>Já tem conta? <a href="cadastro.html">Login-se</a></p>
+    </div> -->
+
+    <main class="w-full h-dvh flex items-center justify-center p-4">
+        <div class="p-6 w-fit flex flex-col gap-6 w-full items-center md:max-w-sm card">
+            <img width="48" src="/assets/logo.svg" alt="">
+            <div class="flex flex-col gap-1 w-full items-center">
+                <h1 class="text-xl text-white">Bem Vindo</h1>
+                <p class="text-sm text-muted">Já tem uma conta? <a href="index.html" class="text-white">Fazer login</a></p>
+            </div>
+            <form class="flex flex-col gap-6 w-full" action="" id="cadastroForm">
+                <input class="px-2 py-2 text-m w-full input-field" type="email" id="email" placeholder="e-mail" required>
+                <input class="px-2 py-2 text-m w-full input-field" type="password" id="senha" placeholder="secret password" required>
+                <input class="px-2 py-2 text-m w-full input-field" type="password" id="confirmarSenha" placeholder="repeat secret password" required>
+                <button class="px-2 py-2 w-full primary-button" type="submit">Registro</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

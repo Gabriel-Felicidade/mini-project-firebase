@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumindo banco de dados</title>
+    <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="bg-dark">
+  <main class="p-2 w-full h-dvh flex flex-col gap-6">
+    <h1 class="py-4 text-white text-xl">Lista de produtos</h1>
+    <div id="produtosTabela" class="w-full rounded-xl products-table">
+      <div class="flex px-4 table-header">
+        <div class="p-2 px-1 w-full text-light-muted">
+          <span class="text-sm">Nome</span>
+        </div>
+        <div class="py-2 px-1 text-sm w-full text-light-muted">
+          <span class="text-sm">Descrição</span>
+        </div>
+        <div class="py-2 px-1 text-sm w-full text-light-muted">
+          <span class="text-sm">Preço</span>
+        </div>
+        <div class="py-2 px-1 text-sm w-full text-light-muted">
+          <span class="text-sm">Estoque</span>
+        </div>
+        <div class="py-2 px-1 text-sm w-full text-light-muted">
+          <span class="text-sm">Categoria</span>
+        </div>
+      </div>
+      <div id="produtosLista" class="table-content flex flex-row">
+        <div class="py-2 px-1 text-sm w-full text-white">
+          <span class="text-sm">Estoque</span>
+        </div>
+      </div>
+    </div>
+  </main>
+    
+  <!-- Original table still present but will be styled appropriately -->
+  <h1>Lista de produtos</h1>
+  <div id="loading">Carregando...</div>
+  <table id="produtosTabela">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Preço</th>
+        <th>Estoque</th>
+        <th>Categoria</th>
+      </tr>  
+    </thead>
+    <tbody id="produtosLista"></tbody>
+  </table>
+  
+  <script src="./js/config/firebase-config.js"></script>
+  <script src="./js/model/produto.js"></script>
+  <script src="./js/services/produto-service.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
